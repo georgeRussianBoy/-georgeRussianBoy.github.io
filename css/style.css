@@ -1,0 +1,76 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Vollkorn:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@500&family=Vollkorn:wght@400;700&display=swap');
+
+
+body
+{
+    color: white;
+    background-color: black;
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+}
+
+.songDiv
+{
+    background-color: rgb(220, 220, 210);
+    color: black;
+    margin-left: 3em;
+    margin-bottom: 3em;
+    min-width: 35em;
+    max-width: 40em;
+    padding: 2em 2em 2em 3em;
+    border-radius: 2em;
+    font-size: 1em;
+    text-align: center;
+
+}
+
+.songDiv article
+{
+    text-align: left;
+    padding-bottom: 1em;
+}
+
+.songDiv h3
+{
+    font-family: 'Vollkorn', Georgia, 'Times New Roman', Times, serif;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.songDiv button
+{
+    background-color: black;
+    color: white;
+    border-radius: 1em;
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    border-style: none;
+    box-shadow: 0.25em 0.25em red;
+}
+
+@keyframes shadowblur {
+    from
+    {
+        box-shadow: 0.25em 0.25em 0em red;
+    }
+    to
+    {
+        box-shadow: 0.1em 0.1em 1em red;
+    }
+}
+
+.songDiv button:hover
+{
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-name: shadowblur;
+    background-color: rgb(60, 60, 60);
+}
+
+.songDiv button:active
+{
+    background-color: rgb(140, 140, 130);
+}
