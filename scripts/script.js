@@ -43,7 +43,6 @@ function showBlocks()
   var divs = document.getElementsByClassName("songDiv");
   for (var i = 0; i < divs.length; ++i)
   {
-    console.log(divs[i]);
     if (getCookie("block" + i + "_display") == "hidden")
     {
       divs[i].getElementsByTagName("article")[0].style.display = "none";
@@ -66,7 +65,7 @@ function toggleBlock(id)
   }
   else
   {
-    setCookie("block" + id + "_display", "none");
+    setCookie("block" + id + "_display", "hidden");
   }
   showBlocks();
 }
