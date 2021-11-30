@@ -1,6 +1,9 @@
+if (getCookie)
+
+
 function setCookie( name, value, exp_y, exp_m, exp_d, path, domain, secure )
 {
-  var cookie_string = name + "=" + escape ( value );
+  var cookie_string = name + "=" + escape (value);
  
   if ( exp_y )
   {
@@ -25,7 +28,10 @@ function getCookie(cookie_name)
   var results = document.cookie.match ( '(^|;) ?' + cookie_name + '=([^;]*)(;|$)' );
  
   if ( results )
+  {
+    console.log(results[1])
     return ( unescape ( results[1] ) );
+  }
   else
     return null;
 }
@@ -57,7 +63,6 @@ function showBlocks()
 
 function toggleBlock(id)
 {
-  var this_div = document.getElementsByClassName("songDiv")[id];
   if (getCookie("block" + id + "_display") == "hidden")
   {
     setCookie("block" + id + "_display", "block");
