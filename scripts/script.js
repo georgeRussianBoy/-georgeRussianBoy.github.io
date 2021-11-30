@@ -18,7 +18,6 @@ function setCookie( name, value, exp_y, exp_m, exp_d, path, domain, secure )
         cookie_string += "; secure";
   
   document.cookie = cookie_string;
-  console.log(document.cookie);
 }
 
 function getCookie(cookie_name)
@@ -26,7 +25,7 @@ function getCookie(cookie_name)
   var results = document.cookie.match ( '(^|;) ?' + cookie_name + '=([^;]*)(;|$)' );
  
   if ( results )
-    return ( unescape ( results[2] ) );
+    return ( unescape ( results[1] ) );
   else
     return null;
 }
