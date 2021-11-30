@@ -68,4 +68,5 @@ function toggleBlock(id)
   {
     setCookie("block" + id + "_display", "none");
   }
+  showBlocks();
 }
