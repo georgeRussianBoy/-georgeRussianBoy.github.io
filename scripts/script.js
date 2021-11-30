@@ -26,8 +26,8 @@ function getCookie(cookie_name)
  
   if ( results )
   {
-    console.log(results[1])
-    return ( unescape ( results[1] ) );
+    console.log(results[2])
+    return ( unescape ( results[2] ) );
   }
   else
     return null;
