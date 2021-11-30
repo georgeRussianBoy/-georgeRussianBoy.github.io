@@ -1,6 +1,6 @@
-setCookie("block" + 0 + "_display");
-setCookie("block" + 1 + "_display");
-setCookie("block" + 2 + "_display");
+setCookie("block" + 0 + "_display", "block");
+setCookie("block" + 1 + "_display", "block");
+setCookie("block" + 2 + "_display", "block");
 
 function setCookie( name, value, exp_y, exp_m, exp_d, path, domain, secure )
 {
