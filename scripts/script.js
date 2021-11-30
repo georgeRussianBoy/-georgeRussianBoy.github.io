@@ -1,31 +1,34 @@
-function getCookie(name) {
-  let matches = document.cookie.match(new RegExp(
-    "(&:^|; )" + name.replace(/([\.$?*|{}\(\)\[\]\\\/\+^])/g, '\\$1') + "=([^;]*)"
-    ));
-  return matches ? decodeURIComponent(matches[1]) : undefined;
+function setCookie( name, value, exp_y, exp_m, exp_d, path, domain, secure )
+{
+  var cookie_string = name + "=" + escape ( value );
+ 
+  if ( exp_y )
+  {
+    var expires = new Date ( exp_y, exp_m, exp_d );
+    cookie_string += "; expires=" + expires.toGMTString();
+  }
+ 
+  if (path)
+        cookie_string += "; path=" + escape ( path );
+ 
+  if (domain)
+        cookie_string += "; domain=" + escape ( domain );
+  
+  if (secure)
+        cookie_string += "; secure";
+  
+  document.cookie = cookie_string;
+  console.log(document.cookie);
 }
 
-function setCookie(name, value, options = {})
+function getCookie(cookie_name)
 {
-  options = {
-    path: '/'
-  };
-
-  if (options.expires instanceof Date) 
-  {
-    options.expires = options.expires.toUTCString();
-  }
-  let updatedCookie = encodeURIComponent(name) + "=" + encodeURIComponent(value);
-  for (let optionKey in options)
-  {
-    updatedCookie += ";" + optionKey;
-    let optionValue = options[optionKey];
-    if (optionValue !== true)
-    {
-      updatedCookie += "=" + optionValue;
-    }
-  }
-  document.cookie = updatedCookie;
+  var results = document.cookie.match ( '(^|;) ?' + cookie_name + '=([^;]*)(;|$)' );
+ 
+  if ( results )
+    return ( unescape ( results[2] ) );
+  else
+    return null;
 }
 
 function deleteCookie(name) 
