@@ -5,7 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <script src="scripts/script.js"></script>
+    <script src="scripts/cookies.js"></script>
+    <script src="scripts/canvas.js"></script>
 </head>
 <body onload="showBlocks();">
     <head>
@@ -63,6 +64,16 @@
                 </p>
             </article>
             <button id="b2" onclick="toggleBlock(2)">спрятать</button>
+        </div>
+        <div class="songDiv">
+            <div class="displayFlex">
+                <label for="countOfColumns">количество столбцов:</label>
+                <input type="text" id="countOfColumns" name="countOfColumns">
+                <button onclick="drawDiagram();">построить</button>
+            </div>
+            <canvas id="diagram" width="600" height="400">
+                Построение диаграмы со случаыйными значениями
+            </canvas>
         </div>
     </body>
     <footer>

@@ -74,3 +74,15 @@ body
 {
     background-color: rgb(140, 140, 130);
 }
+
+.displayFlex
+{
+    display: flex;
+    justify-content: space-around;
+}
+
+canvas 
+{
+    margin-top: 2em;
+    border: 1px solid rgb(180, 180, 180);
+}
